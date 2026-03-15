@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../dashboard/bloc/tab_bloc.dart';
 import '../../dashboard/view/tab_view.dart';
-import '../../dashboard/view_model/tab_bloc.dart';
 import '../repository/LoginRepository.dart';
 import '../view_model/bloc/login_bloc.dart';
 import '../view_model/bloc/login_event.dart';

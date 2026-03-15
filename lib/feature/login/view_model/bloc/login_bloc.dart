@@ -33,10 +33,12 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   }
 
   void _onPasswordChanged(PasswordChanged event, Emitter<LoginState> emit) {
+    final passwordValidation = Validators.validatePassword(event.password);
     emit(
       state.copyWith(
         password: event.password,
         passwordError: Validators.validatePassword(event.password),
+        clearPasswordError: passwordValidation == null,
         clearErrorMessage: true,
       ),
     );

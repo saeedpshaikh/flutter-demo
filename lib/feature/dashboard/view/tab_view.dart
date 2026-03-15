@@ -13,9 +13,11 @@ import '../../policies/domain/usecase/get_policies_usecase.dart';
 import '../../policies/presentation/bloc/policies_bloc.dart';
 import '../../policies/presentation/bloc/policies_event.dart';
 import '../../policies/presentation/view/policies_screen.dart';
-import '../view_model/tab_bloc.dart';
-import '../view_model/tab_event.dart';
-import '../view_model/tab_state.dart';
+import '../../profile/bloc/profile_bloc.dart';
+import '../bloc/tab_bloc.dart';
+import '../bloc/tab_event.dart';
+import '../bloc/tab_state.dart';
+
 
 class MainTabView extends StatelessWidget {
   const MainTabView({super.key});
@@ -40,7 +42,11 @@ class MainTabView extends StatelessWidget {
         child: const PoliciesScreen(),
       ),
       const ClaimScreen(),
-      const ProfileScreen(),
+     // const ProfileScreen(),
+      BlocProvider(
+        create: (_) => ProfileBloc(),
+        child: const ProfileScreen(),
+      ),
     ];
 
     return BlocBuilder<TabBloc, TabState>(
