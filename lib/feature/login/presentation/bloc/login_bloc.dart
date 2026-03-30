@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/util/validators.dart';
-import '../../model/login_request.dart';
-import '../../repository/LoginRepository.dart';
+import '../../data/model/login_request.dart';
+import '../../domain/repository/LoginRepository.dart';
 import 'login_event.dart';
 import 'login_state.dart';
 

@@ -1,4 +1,5 @@
-import '../model/login_request.dart';
+
+import '../../data/model/login_request.dart';
 
 class LoginRepository {
   Future<bool> login(LoginRequest request) async {

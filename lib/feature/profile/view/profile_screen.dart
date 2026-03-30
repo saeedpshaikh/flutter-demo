@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart';
+import 'package:nyl_demo/feature/login/presentation/view/login_screen.dart';
 
 import '../bloc/profile_bloc.dart';
 import '../bloc/profile_event.dart';
@@ -27,6 +28,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
         if (state.logoutSuccess) {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(content: Text('Logout clicked')),
+          );
+
+          Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute(builder: (_) => const LoginScreen()),
+                (route) => false, // removes all previous screens
           );
 
           // later navigate to login screen here
