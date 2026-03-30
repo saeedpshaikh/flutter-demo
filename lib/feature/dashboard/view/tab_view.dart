@@ -70,7 +70,7 @@ class MainTabView extends StatelessWidget {
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.assignment_outlined),
-                label: 'Claims',
+                label: 'Payment',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.person_outline),
